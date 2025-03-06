@@ -1,5 +1,7 @@
+const API_BASE_URL = "https://birthday-backend-yvlv.onrender.com"; // Your Render backend URL
+
 window.onload = function () {
-  var duration = 3 * 1000; // Confetti will last for 5 seconds
+  var duration = 3 * 1000; // Confetti will last for 3 seconds
   var end = Date.now() + duration;
 
   (function frame() {
@@ -60,7 +62,7 @@ document
     const name = document.getElementById("name").value;
     const message = document.getElementById("message").value;
 
-    fetch("http://localhost:3001/submit-wish", {
+    fetch(`${API_BASE_URL}/submit-wish`, { // Use the Render backend URL here
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, message }),
@@ -77,7 +79,7 @@ document
   });
 
 function loadWishes() {
-  fetch("http://localhost:3001/get-wishes")
+  fetch(`${API_BASE_URL}/get-wishes`) // Use the Render backend URL here
     .then((response) => response.json())
     .then((data) => {
       const wishesContainer = document.getElementById("wishes");
