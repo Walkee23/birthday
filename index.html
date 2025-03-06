@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Isabelle!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Selima&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="landing">
+        <nav>
+            <button onclick="scrollToSection('landing')">Home</button>
+            <button onclick="scrollToSection('messages')">Messages</button>
+            <button onclick="scrollToSection('submit')">Send a Message</button>
+        </nav>
+        <div class="content">
+            <div class="image-placeholder">
+                <img src="src/20240106_165029.jpg" alt="Birthday Scene">
+            </div>
+            <div class="text">
+                <h1 class="happy">Happy Birthday</h1>
+                <h1 class="isabelle">ISABELLE!</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- MESSAGES PAGE -->
+    <div id="messages">
+        <h2>Birthday Wishes</h2>
+        <div class="wishes" id="wishes"></div>
+    </div>
+
+    <!-- SUBMIT WISH FORM -->
+    <div id="submit">
+        <div class="container">
+            <h2>Send a Birthday Wish!</h2>
+            <form id="wishForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <textarea id="message" placeholder="Your Birthday Wish" required></textarea>
+                <button type="submit" class="submit-button">Submit Wish</button>
+            </form>
+        </div>
+    </div>
+
+    <audio id="bg-music" autoplay loop>
+        <source src="src/happy birthday.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
